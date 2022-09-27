@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Intents Application Dapliyan</string>
+    <string name="btnLabelnext">Next</string>
+    <string name="btnLabelback">Back</string>
+    <string name="btnGoogle">Google</string>
+    <string name="btnDialer">Dialer</string>
+    <string name="btnEmail">Email</string>
+    <string name="btnCamera">Camera</string>
+    <string name="btnToast">Toast</string>
+    <string name="btnNext">Next</string>
+    <string name="btnBack">Next</string>
+</resources>
