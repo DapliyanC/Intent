@@ -2,107 +2,113 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/btnBack2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity2">
+    tools:context=".EventScheduler">
 
     <Button
-        android:id="@+id/btnBack"
+        android:id="@+id/addBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="28dp"
-        android:text="Back"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="32dp"
+        android:text="Add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEnd" />
 
     <TextView
-        android:id="@+id/tvSendMail"
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:text="Send to (Email)"
-        android:textStyle="bold"
+        android:text="Title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/txtSubject"
+        android:id="@+id/txtTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
-        android:hint="Subject"
+        android:hint="Title"
         android:inputType="textPersonName"
-        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSubject" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
 
     <TextView
-        android:id="@+id/tvSubject"
+        android:id="@+id/tvDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Subject"
-        android:textStyle="bold"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Description"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
 
     <TextView
-        android:id="@+id/tvMessage"
+        android:id="@+id/tvStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Message"
-        android:textStyle="bold"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Time  Start "
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSubject" />
+        app:layout_constraintTop_toBottomOf="@+id/txtDescription" />
+
+    <TextView
+        android:id="@+id/tvEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Time End "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtStart" />
 
     <EditText
-        android:id="@+id/txtMessage"
+        android:id="@+id/txtDescription"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
-        android:hint="Message"
+        android:hint="Description"
         android:inputType="textPersonName"
-        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvMessage" />
+        app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
 
     <EditText
-        android:id="@+id/txtEmailAddress"
+        android:id="@+id/txtStart"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
-        android:hint="ExampleEmail@address.com"
-        android:inputType="textEmailAddress"
-        android:minHeight="48dp"
+        android:hint="Time Start"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSendMail" />
+        app:layout_constraintTop_toBottomOf="@+id/tvStart" />
 
-    <Button
-        android:id="@+id/btnEmailSend"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/txtEnd"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
-        android:text="Send"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="Time End"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.924"
-        app:layout_constraintStart_toEndOf="@+id/btnBack" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEnd" />
 </androidx.constraintlayout.widget.ConstraintLayout>

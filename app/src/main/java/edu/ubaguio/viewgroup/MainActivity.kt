@@ -3,12 +3,10 @@ package edu.ubaguio.viewgroup
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,8 +18,9 @@ class MainActivity : AppCompatActivity() {
         val toastBtn: Button = findViewById(R.id.btnToast)
         val nxtBtn: Button = findViewById(R.id.btnNext)
         val emailBtn: Button = findViewById(R.id.btnEmail)
-        val cameraBtn: Button = findViewById(R.id.btnCamera)
+        val cameraBtn: Button = findViewById(R.id.btnEventScheduler)
         val dialerBtn: Button = findViewById(R.id.btnDialer)
+        val schedulerBtn: Button = findViewById(R.id.btnEventScheduler)
 
         //explicit intent -> launch or start an activity
         nxtBtn.setOnClickListener {
@@ -58,6 +57,12 @@ class MainActivity : AppCompatActivity() {
         toastBtn.setOnClickListener {
             Toast.makeText(this, "Goodbye", Toast.LENGTH_LONG).show()
         }
+
+        schedulerBtn.setOnClickListener {
+            val i = Intent(this, EventScheduler::class.java)
+            startActivity(i)
+        }
+
 
     }
 
